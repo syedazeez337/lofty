@@ -4,6 +4,8 @@ import (
 	"bufio"
 	"fmt"
 	"os"
+
+	"github.com/syedazeez337/lofty/tokeniser"
 )
 
 func main() {
@@ -33,10 +35,22 @@ func main() {
 
 		strmsg := string(msg)
 
+		// exit message
 		if strmsg == "exit" {
+			fmt.Println("Exiting repl...")
 			return
 		}
 
-		fmt.Println("=>", strmsg)
+		out := tokeniser.DisplayMsg(strmsg)
+		fmt.Println("=>", out)
+
+		/*
+		if strmsg == "1 + 2 + 3" {
+			out := tokeniser.DisplayMsg(strmsg)
+			fmt.Println("=>", out)
+		} else {
+			fmt.Println("=>", strmsg)
+		}
+		*/
 	}
 }

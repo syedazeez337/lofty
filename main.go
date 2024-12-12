@@ -41,7 +41,7 @@ func main() {
 			return
 		}
 
-		out := tokeniser.DisplayMsg(strmsg)
+		out := tokeniser.SpecialFunc(strmsg)
 		fmt.Println("=>", out)
 
 		/*
